@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.Driver_Management">
+
+    <application
+        android:usesCleartextTraffic="true"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
+        <!--<activity
+            android:name=".HomeActivity"
+            android:parentActivityName=".LoginActivity"/>-->
+
+        <!--<activity
+            android:name="com.example.Driver_Management.HomeActivity"
+            android:label="HomeActivity"
+            android:parentActivityName="com.example.Driver_Management.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Driver_Management.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.example.Driver_Management.TrajetActivity"
+            android:label="TrajetActivity"
+            android:parentActivityName="com.example.Driver_Management.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Driver_Management.LoginActivity" />
+        </activity>
+    </application>-->
+       <!-- <activity android:name="com.example.Driver_Management.ProfilActivity"></activity>
+        <activity
+            android:name="com.example.Driver_Management.RegisterActivity"
+            android:label="RegisterActivity"
+            android:parentActivityName="com.example.Driver_Management.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Driver_Management.LoginActivity" />
+        </activity>
+        <activity android:name="com.example.Driver_Management.MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        &lt;!&ndash;<activity
+            android:name=".RegisterActivity"
+            android:parentActivityName=".MainActivity" />&ndash;&gt;
+        <activity
+            android:name=".LoginActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name="com.example.Driver_Management.HomeActivity"
+            android:label="HomeActivity"
+            android:parentActivityName="com.example.Driver_Management.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Driver_Management.LoginActivity" />
+        </activity>
+        <activity
+            android:name="com.example.Driver_Management.TrajetActivity"
+            android:label="TrajetActivity"
+            android:parentActivityName="com.example.Driver_Management.LoginActivity">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.Driver_Management.LoginActivity" />
+        </activity>
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />-->
+
+
+    </application>
+
+</manifest>

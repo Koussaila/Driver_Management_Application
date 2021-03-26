@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.Driver_Management.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="470px"
+        android:background="@drawable/header"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="402dp"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/aladin"
+            android:gravity="center"
+            android:text="Bienvenue sur votre compte!"
+            android:textColor="@android:color/white"
+            android:textSize="36sp"
+            android:textStyle="bold" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header"
+        android:layout_marginTop="21dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:padding="15dp">
+
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="337dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/color2"
+            android:fontFamily="sans-serif-medium"
+            android:onClick="page7"
+            android:rotationX="25"
+            android:text="Voir mon profil"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="336dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/color2"
+            android:fontFamily="sans-serif-medium"
+            android:rotationX="25"
+            android:text="Deposer un trajet"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="336dp"
+            android:layout_height="62dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@color/color2"
+            android:onClick="page5"
+            android:rotationX="25"
+            android:fontFamily="sans-serif-medium"
+            android:text="Me deconnecter"
+            android:textColor="@android:color/white"
+            android:textSize="25dp" />
+
+    </LinearLayout>
+</RelativeLayout>
