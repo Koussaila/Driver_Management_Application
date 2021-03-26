@@ -63,7 +63,7 @@
             android:layout_marginTop="30dp"
             android:background="@color/color2"
             android:text="Se connecter"
-            android:onClick="page6"
+            android:onClick="page2"
             android:layout_gravity="center"
             android:textSize="25dp"
             android:textColor="@android:color/white" />
@@ -73,7 +73,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            android:onClick="page2"
+            android:onClick="page6"
             android:text="Nouveau ici ? Créez un compte!"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

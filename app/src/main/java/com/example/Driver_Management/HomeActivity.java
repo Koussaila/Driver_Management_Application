@@ -21,7 +21,7 @@ public class HomeActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_profil);
+        setContentView(R.layout.activity_home);
         button=findViewById(R.id.button1);
         btntrajet=findViewById(R.id.button2);
         btndeconnexion=findViewById(R.id.button4);
@@ -85,10 +85,10 @@ public class HomeActivity extends AppCompatActivity {
         startActivity(new Intent(this, RegisterActivity.class));
     }
 
-    public void page7(View view)
+    /*public void page7(View view)
     {
         startActivity(new Intent(this, ProfilActivity.class));
-    }
+    }*/
 
     public void page5(View view)
     {

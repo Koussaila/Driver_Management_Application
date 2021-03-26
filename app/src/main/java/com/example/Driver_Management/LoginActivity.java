@@ -127,11 +127,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void page2(View view)
     {
-        startActivity(new Intent(this, RegisterActivity.class));
+        startActivity(new Intent(this, ProfilActivity.class));
     }
     public void page6(View view)
     {
-        startActivity(new Intent(this, HomeActivity.class));
+        startActivity(new Intent(this, RegisterActivity.class));
     }
 
 
