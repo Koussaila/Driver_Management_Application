@@ -34,67 +34,6 @@
             android:name=".TrajetActivity"
             android:parentActivityName=".HomeActivity"/>
 
-        <!--<activity
-            android:name="com.example.Driver_Management.HomeActivity"
-            android:label="HomeActivity"
-            android:parentActivityName="com.example.Driver_Management.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Driver_Management.LoginActivity" />
-        </activity>
-        <activity
-            android:name="com.example.Driver_Management.TrajetActivity"
-            android:label="TrajetActivity"
-            android:parentActivityName="com.example.Driver_Management.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Driver_Management.LoginActivity" />
-        </activity>
-    </application>-->
-       <!-- <activity android:name="com.example.Driver_Management.ProfilActivity"></activity>
-        <activity
-            android:name="com.example.Driver_Management.RegisterActivity"
-            android:label="RegisterActivity"
-            android:parentActivityName="com.example.Driver_Management.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Driver_Management.LoginActivity" />
-        </activity>
-        <activity android:name="com.example.Driver_Management.MainActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
-        &lt;!&ndash;<activity
-            android:name=".RegisterActivity"
-            android:parentActivityName=".MainActivity" />&ndash;&gt;
-        <activity
-            android:name=".LoginActivity"
-            android:parentActivityName=".MainActivity" />
-        <activity
-            android:name="com.example.Driver_Management.HomeActivity"
-            android:label="HomeActivity"
-            android:parentActivityName="com.example.Driver_Management.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Driver_Management.LoginActivity" />
-        </activity>
-        <activity
-            android:name="com.example.Driver_Management.TrajetActivity"
-            android:label="TrajetActivity"
-            android:parentActivityName="com.example.Driver_Management.LoginActivity">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.example.Driver_Management.LoginActivity" />
-        </activity>
-
-        <meta-data
-            android:name="preloaded_fonts"
-            android:resource="@array/preloaded_fonts" />-->
-
-
     </application>
 
 </manifest>

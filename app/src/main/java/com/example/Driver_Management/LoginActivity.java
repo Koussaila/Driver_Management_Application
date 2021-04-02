@@ -32,14 +32,13 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-
         mEmail = findViewById(R.id.email);
         mPassword = findViewById(R.id.password);
-        fAuth = FirebaseAuth.getInstance();
         mLoginBtn = findViewById(R.id.validation);
         mCreateBtn = findViewById(R.id.createText);
         forgotTextLink = findViewById(R.id.forgotPassword);
 
+        fAuth = FirebaseAuth.getInstance();
 
         mLoginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,7 +62,7 @@ public class LoginActivity extends AppCompatActivity {
                     return;
                 }
 
-                // authenticate the user
+                // authentifier l'utilisateur
 
                 fAuth.signInWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -95,7 +94,7 @@ public class LoginActivity extends AppCompatActivity {
                 passwordResetDialog.setPositiveButton("Oui", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // extract the email and send reset link
+                        // extraire l'e-mail et envoyer le lien de réinitialisation
                         String mail = resetMail.getText().toString();
                         fAuth.sendPasswordResetEmail(mail).addOnSuccessListener(new OnSuccessListener<Void>() {
                             @Override
@@ -115,7 +114,7 @@ public class LoginActivity extends AppCompatActivity {
                 passwordResetDialog.setNegativeButton("No", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        // close the dialog
+                        // fermer la boîte de dialogue
                     }
                 });
 

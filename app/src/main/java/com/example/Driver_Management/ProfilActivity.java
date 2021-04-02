@@ -21,50 +21,42 @@ import com.google.firebase.firestore.FirebaseFirestoreException;
 public class ProfilActivity extends AppCompatActivity {
 
     private static final int GALLERY_INTENT_CODE = 1023 ;
-    TextView Name,email,phone,prenom,adresse;
+    TextView name,email,phone,prenom,adresse;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
     String userId;
-    Button logout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
-        phone = findViewById(R.id.textView5);
-        Name = findViewById(R.id.textView);
-        email    = findViewById(R.id.textView3);
+        name    = findViewById(R.id.textView);
+        prenom  = findViewById(R.id.textView2);
+        email   = findViewById(R.id.textView3);
         adresse = findViewById(R.id.textView4);
-        prenom    = findViewById(R.id.textView2);
+        phone   = findViewById(R.id.textView5);
 
-
+        //Obtenir des instances Firebase
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
-
         userId = fAuth.getCurrentUser().getUid();
-
 
 
         DocumentReference documentReference = fStore.collection("users").document(userId);
         documentReference.addSnapshotListener(this, new EventListener<DocumentSnapshot>() {
             @Override
             public void onEvent(@Nullable DocumentSnapshot documentSnapshot, @Nullable FirebaseFirestoreException e) {
-                /* if(documentSnapshot.exists()){ */
-                adresse.setText(documentSnapshot.getString("adresse"));
-                email.setText(documentSnapshot.getString("email"));
-                Name.setText(documentSnapshot.getString("fName"));
-                phone.setText(documentSnapshot.getString("phone"));
+                name.setText(documentSnapshot.getString("fName"));
                 prenom.setText(documentSnapshot.getString("prenom"));
+                email.setText(documentSnapshot.getString("email"));
+                adresse.setText(documentSnapshot.getString("adresse"));
+                phone.setText(documentSnapshot.getString("phone"));
+
             }
         });
     }
 
-    public void logout(View view) {
-        FirebaseAuth.getInstance().signOut();//logout
-        startActivity(new Intent(getApplicationContext(),LoginActivity.class));
-        finish();
-    }
 
     public void page6(View view)
     {

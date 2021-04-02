@@ -47,13 +47,15 @@ public class RegisterActivity extends AppCompatActivity {
         mEmail      = findViewById(R.id.email);
         mAdresse   = findViewById(R.id.adresse);
         mPassword   = findViewById(R.id.password);
-        mPhone      = findViewById(R.id.telephone);
+        mPhone      = findViewById(R.id.phone);
         mRegisterBtn= findViewById(R.id.valider);
         mLoginBtn   = findViewById(R.id.createText);
 
+        // Obtenir des instances Firebase
         fAuth = FirebaseAuth.getInstance();
         fStore = FirebaseFirestore.getInstance();
 
+        //si déjà enregistrer, accédez à l'écran de connexion
         if(fAuth.getCurrentUser() != null){
             startActivity(new Intent(getApplicationContext(),LoginActivity.class));
             finish();
@@ -86,14 +88,14 @@ public class RegisterActivity extends AppCompatActivity {
                     return;
                 }
 
-                // register the user in firebase
+                // Créer un utilisateurr dans firebase
 
                 fAuth.createUserWithEmailAndPassword(email,password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if(task.isSuccessful()){
 
-                            // send verification link
+                            // envoyer le lien de vérification
 
                             FirebaseUser fuser = fAuth.getCurrentUser();
                             fuser.sendEmailVerification().addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -104,7 +106,7 @@ public class RegisterActivity extends AppCompatActivity {
                             }).addOnFailureListener(new OnFailureListener() {
                                 @Override
                                 public void onFailure(@NonNull Exception e) {
-                                    Log.d(TAG, "onFailure: Email non envoyé " + e.getMessage());
+                                    Log.d(TAG, "Echec: Email non envoyé " + e.getMessage());
                                 }
                             });
 
@@ -113,10 +115,11 @@ public class RegisterActivity extends AppCompatActivity {
                             DocumentReference documentReference = fStore.collection("users").document(userID);
                             Map<String,Object> user = new HashMap<>();
                             user.put("fName",nom);
-                            user.put("adresse",adresse);
-                            user.put("email",email);
-                            user.put("phone",phone);
                             user.put("prenom",prenom);
+                            user.put("email",email);
+                            user.put("adresse",adresse);
+                            user.put("phone",phone);
+
                             documentReference.set(user).addOnSuccessListener(new OnSuccessListener<Void>() {
                                 @Override
                                 public void onSuccess(Void aVoid) {

@@ -21,7 +21,6 @@ public class TrajetActivity extends AppCompatActivity {
     private FirebaseAuth.AuthStateListener mAuthListener;
     FirebaseAuth fAuth;
     FirebaseFirestore fStore;
-    String userID;
     DatabaseReference ref;
     Trajet trajet;
 

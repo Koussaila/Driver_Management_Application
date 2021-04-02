@@ -75,20 +75,10 @@ public class HomeActivity extends AppCompatActivity {
 
     }
 
-    public void page3(View view)
-    {
-        startActivity(new Intent(this, TrajetActivity.class));
-    }
-
     public void page2(View view)
     {
         startActivity(new Intent(this, RegisterActivity.class));
     }
-
-    /*public void page7(View view)
-    {
-        startActivity(new Intent(this, ProfilActivity.class));
-    }*/
 
     public void page5(View view)
     {

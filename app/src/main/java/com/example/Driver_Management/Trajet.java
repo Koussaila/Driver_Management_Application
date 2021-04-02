@@ -8,7 +8,6 @@ public class Trajet {
     private Double volume,prix;
 
     public Trajet() {
-
     }
 
     public String getDepart() {
